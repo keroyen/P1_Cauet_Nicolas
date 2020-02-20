@@ -1,0 +1,1231 @@
+@font-face {
+  font-family: 'robotoregular';
+  src: url('../fonts/Roboto-Regular-webfont.eot');
+  src: url('../fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Roboto-Regular-webfont.woff2') format('woff2'),
+  url('../fonts/Roboto-Regular-webfont.woff') format('woff'),
+  url('../fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+  url('../fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'robotobold';
+  src: url('../fonts/Roboto-Bold-webfont.eot');
+  src: url('../fonts/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Roboto-Bold-webfont.woff2') format('woff2'),
+  url('../fonts/Roboto-Bold-webfont.woff') format('woff'),
+  url('../fonts/Roboto-Bold-webfont.ttf') format('truetype'),
+  url('../fonts/Roboto-Bold-webfont.svg#robotoregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'robotomedium';
+  src: url('../fonts/Roboto-Medium-webfont.eot');
+  src: url('../fonts/Roboto-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Roboto-Medium-webfont.woff2') format('woff2'),
+  url('../fonts/Roboto-Medium-webfont.woff') format('woff'),
+  url('../fonts/Roboto-Medium-webfont.ttf') format('truetype'),
+  url('../fonts/Roboto-Medium-webfont.svg#robotoregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'robotoblack';
+  src: url('../fonts/Roboto-Black-webfont.eot');
+  src: url('../fonts/Roboto-Black-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Roboto-Black-webfont.woff2') format('woff2'),
+  url('../fonts/Roboto-Black-webfont.woff') format('woff'),
+  url('../fonts/Roboto-Black-webfont.ttf') format('truetype'),
+  url('../fonts/Roboto-Black-webfont.svg#robotoregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: robotomedium,arial,helvetica,serif;
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+/*
+Section top-header contains a logo and a menu in position fixed
+and a background image with site description.
+*/
+
+/*containers for the logo and the menu in position fixed*/
+.top-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: #fff;
+  background-attachment: fixed;
+  height: 99px;
+  z-index: 2;
+}
+
+/*menu anchor*/
+.anchor{
+  display: block;
+  visibility: hidden;
+  position: relative;
+  top: -100px
+}
+
+.anchor--contact {
+  top: 600px;
+}
+
+.anchor-portfolio {
+  display: block;
+  visibility: hidden;
+  position: relative;
+  top: -100px;
+}
+
+/*containers for the logo of the website*/
+.top-header-logo {
+  margin: 0;
+  float: left;
+}
+
+/*logo of the wesite*/
+.top-header-logo__img {
+  margin: 22px 0 22px 155px;
+}
+
+/*containers for the menu*/
+.top-nav{
+  float: right;
+  right: 0;
+}
+
+/* a checkbox to create a hamburger menu for the small screens*/
+.top-nav-menu-checkbox {
+  display: none;
+}
+
+/*containers list*/
+.top-nav-container {
+  margin: 45px 164px 45px 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+/*list*/
+.top-nav-container__list {
+  display: inline;
+}
+
+/*link of the list*/
+.top-nav-container__list__link{
+  text-decoration: none;
+  padding:0 15px 0 15px;
+  color:#555;
+}
+
+/*annimation for the links in hover*/
+.top-nav-container__list__link:hover {
+  border-top: 3px solid #4591b1;
+  padding-top: 42px;
+}
+
+/*/////////// end section top-header //////////*/
+
+/*/////////// section bg contains a background image and a presentation text of the site ///////////*/
+
+/*containers of the presentation text and the background image and three buttons*/
+.top-background {
+  display: flex;
+  margin-top: 100px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+/*background image*/
+.bg {
+  background: url(../images/slider/bg1.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 558px;
+  flex: 1 1 100%;
+}
+
+/*presentation text*/
+.bg-text {
+  padding: 0;
+  margin-top: 140px;
+  margin-left: 306px;
+  position: absolute;
+}
+
+.bg-text__title {
+  font-family: robotoblack,helvetica,arial,serif;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 2.4em;
+  margin-bottom: 5px;
+  line-height: 40px;
+}
+
+.bg-text__title--color {
+  color: #4591b1;
+}
+
+.bg-text__para {
+  color: #fff;
+  margin-top: 10px;
+}
+
+/*presentation text button*/
+.bg-text-btn {
+  font-family: robotomedium, arial,helvetica,serif;
+  color: #fff;
+  background-color: #5cadd3;
+  border-color:#4591b1;
+  border-right:none;
+  border-top: none;
+  border-left: none;
+  border-bottom: 3px solid #4591b1;
+  border-radius: 5px 5px 3px 3px;
+  width: 125px;
+  height: 46px;
+  font-size: 1.1em;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+
+/*left button of the background image with a rounded border*/
+.btn-left {
+  position: absolute;
+  left: 0;
+  top: 244px;
+  color: #fff;
+  font-size: 1.3em;
+  padding-left: 10px;
+  background-color:rgba(0,0,0,0.2);
+  width: 35px;
+  height: 70px;
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+  cursor: pointer;
+}
+
+.btn-left--border {
+  position: absolute;
+  left: 0;
+  top:25px;
+  left: 8px;
+}
+
+/*right button of the background image with a rounded border*/
+.btn-right {
+  position: absolute;
+  right: 0;
+  top: 244PX;
+  color:#fff;
+  font-size: 1.3em;
+  padding-right: 10px;
+  background-color: rgba(0,0,0,0.2);
+  width: 35px;
+  height: 70px;
+  border-top-left-radius:35px;
+  border-bottom-left-radius: 35px;
+  cursor: pointer;
+}
+
+.btn-right--border {
+  position: absolute;
+  top:25px;
+  right: 8px;
+}
+
+
+/*The main section contains two texts with a separator
+with a list of site services with logos inside the circle and a computer
+image.
+*/
+
+/*containers flex of the title and the text and the separator*/
+.main-text {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+/*containers of the title and the text and the separator*/
+.top-main-text {
+  flex: 0 1 650px;
+}
+
+/*services title*/
+.main-text__title {
+  font-family: robotoblack,arial,helvetica,serif;
+  color: #272727;
+  font-size: 2.6em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/*services separator*/
+.main-text-separator {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/*use of speudo-element to display the line after and before the circle inside the separator*/
+.main-text-separator::before,
+.main-text-separator::after {
+  content: "";
+  color: #cbcbcb;
+  flex-grow:1;
+  border-top: 1px solid;
+  margin:0 5px;
+  flex:0 0 60px;
+}
+
+/*circle inside the separator*/
+.main-text-separator__circle {
+  color: #4591b1;
+}
+
+/*services text*/
+.main-text__para {
+  color: #64686d;
+  line-height: 2em;
+  align-self: center;
+}
+
+/*computer image containers and list of services with logos inside the circle*/
+.main-image {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom:100px;
+}
+
+/*computer image containers to the left of the list*/
+.main-image-container {
+  margin: 30px 0 0 245px;
+}
+
+/*computer image*/
+.main-image-container__computer {
+  width: auto;
+}
+
+/*containers for the site services list with logos and circle */
+.main-list{
+  display: flex;
+  flex-flow: column;
+  margin: 80px 0 0 180px;
+  list-style-type: none;
+  padding-left: 0;
+  flex:0 1 500px;
+}
+
+/*containers of the first logo and the text*/
+.main-list__logo-line {
+  margin-top: 30px;
+  position: relative;
+}
+
+/*first containers of the logo and the circle*/
+.logo-line-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  bottom: 40px;
+  right:105%;
+}
+
+/*creation of the first outside circle*/
+.logo-line-container::before {
+  content: "";
+  border-radius: 50%;
+  border:1px solid #cbcbcb;
+  height: 60px;
+  width: 60px;
+  position: absolute;
+}
+
+/*first logo*/
+.logo-line-container__first-logo {
+  font-size: x-large;
+  color: #4591b1;
+}
+
+/*first circle*/
+.logo-line-container__first-circle {
+  position: absolute;
+  left: 62px;
+  font-size: 0.6em;
+  border:3px solid #fff;
+  color: #4591b1;
+}
+
+/*containers of the second logo and the text*/
+.main-list__logo-cubes {
+  margin-top: 30px;
+  position: relative;
+  padding-left: 0;
+}
+
+/*second containers of the logo and the circle*/
+.logo-cubes-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  bottom: 20px;
+  right:105%;
+}
+
+/*creation of the second outside circle*/
+.logo-cubes-container::before {
+  content: "";
+  border-radius: 50%;
+  border:1px solid #cbcbcb;
+  height: 60px;
+  width: 60px;
+  position: absolute;
+}
+
+/*second logo*/
+.logo-cubes-container__second-logo {
+  font-size: x-large;
+  color: #4591b1;
+}
+
+/*second circle*/
+.logo-cubes-container__second-circle {
+  position: absolute;
+  left: 62px;
+  font-size: 0.6em;
+  border:3px solid #fff;
+  color: #4591b1;
+}
+
+/*containers of the third logo and the text*/
+.main-list__logo-pie {
+  margin-top: 30px;
+  position: relative;
+  padding-left: 0;
+}
+
+/*third containers of the logo and the circle*/
+.logo-pie-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  bottom:40px;
+  right:105%;
+}
+
+/*creation of the third outside circle*/
+.logo-pie-container::before {
+  content: "";
+  border-radius: 50%;
+  border:1px solid #cbcbcb;
+  height: 60px;
+  width: 60px;
+  position: absolute;
+}
+
+/*third logo*/
+.logo-pie-container__third-logo {
+  font-size: x-large;
+  color: #4591b1;
+}
+
+/*third circle*/
+.logo-pie-container__third-circle {
+  position: absolute;
+  left: 62px;
+  font-size: 0.6em;
+  border:3px solid #fff;
+  color: #4591b1;
+}
+
+/*title inside the list*/
+.main-list__title {
+  color: #272727;
+  margin: 0 0 5px 0;
+}
+
+/*paragraph inside the list*/
+.main-list__para {
+  color: #5b5b5b;
+  line-height: 22px;
+  margin: 0;
+}
+
+/* Middle section contains a list of buttons
+and a portfolio images with an text overlay
+in front of the images.
+*/
+
+/*section project with text and separator and a list with four butttons*/
+.container-project {
+  background-color: #f5f5f5;
+}
+
+/*containers with text and separator*/
+.project {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+/*text of the project section*/
+.top-text-project {
+  flex:0 1 650px;
+}
+
+/*title of the project section*/
+.project__title {
+  font-family: robotoblack,arial,helvetica,serif;
+  color: #272727;
+  font-size: 2.6em;
+  text-transform: uppercase;
+  padding-top: 21px;
+  margin-bottom: 10px;
+}
+
+/*separator of the project text*/
+.project-separator {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/*use of speudo-element to display the line after and before the circle inside the separator*/
+.project-separator::before,
+.project-separator::after {
+  content: "";
+  color: #cbcbcb;
+  border-top:1px solid;
+  flex-grow:1;
+  flex: 0 0 60px;
+}
+
+/*project section separator circle*/
+.project-separator__circle {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  padding:2px;
+  color: #4591b1;
+}
+
+/*text of the project section*/
+.project__para {
+  align-self: center;
+  color: #64686d;
+  line-height: 2em;
+
+}
+
+/*containers of the four buttons*/
+.btn-project {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+/*list of the four buttons*/
+.btn-project-container {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 45px;
+  padding-left: 0;
+}
+
+.btn-project-container__list {
+  position: relative;
+}
+
+/*button allworks*/
+.btn__allworks {
+  font-family: robotomedium,helvetica,arial,serif;
+  font-size: 0.9em;
+  color: #fff;
+  background-color: #5cadd3;
+  border-color: #4591b1;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-right: none;
+  border-top: none;
+  border-left: none;
+  border-bottom: 4px solid #468cad;
+  cursor: pointer;
+  height: 40px;
+  width: 90px;
+}
+
+/*logo below button allworks*/
+.btn-project-container__list__down {
+  position: absolute;
+  top: 25px;
+  left: 40px;
+  font-size: 1.5em;
+  color: #468cad;
+}
+
+/*button creative,corporate,portfolio*/
+.btn__creative,
+.btn__corporate,
+.btn__portfolio {
+  background-color: #e5e5e5;
+  color: #64686d;
+  font-size: 0.9em;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  height: 40px;
+  width:90px;
+}
+
+.btn__portfolio {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/*the portfolio section contains images and text overlays*/
+.portfolio {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+  background-color: #f5f5f5;
+}
+
+/*container of images from the project section*/
+.portfolio-images {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content:center;
+  align-content: center;
+  align-items: center;
+  width: 1134px;
+}
+
+/*container pictures*/
+.container-images {
+  align-self: center;
+  position: relative;
+  padding: 10px;
+  margin: 0;
+}
+
+/*picture*/
+.container-images__photo {
+  width: 260px;
+  height: 173px;
+}
+
+/*overlay number one*/
+.overlay-container-01 {
+  position: relative;
+  width: 260px;
+  height: 173px;
+  margin-bottom: 3px;
+  cursor:pointer;
+}
+
+/*when you hover the image you can see the text display*/
+.overlay-container-01:hover
+.overlay-01 {
+  height:62px;
+  opacity: 1;
+}
+
+/*hide the overlay and add a transition for more fluidity*/
+.overlay-01 {
+  width: 260px;
+  height:0;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transition: 1s ease;
+}
+
+/*logo inside the overlay*/
+.eye-overlay-01 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 10px;
+  bottom: 39px;
+  position: absolute;
+  opacity: 1;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: #4591b1;
+  height: 40px;
+  width: 41px;
+}
+
+/*logo*/
+.fa-eye-01 {
+  font-size: 0.8em;
+}
+
+.overlay-text-01 {
+  margin-top: 5px;
+  line-height: 5px;
+  padding-left: 5px;
+}
+
+.overlay__title-01 {
+  font-size: 1em;
+}
+
+.overlay__para-01 {
+  font-size: 0.9em;
+}
+
+.overlay-container-02 {
+  position: relative;
+  width: 260px;
+  height: 173px;
+  margin-bottom: 3px;
+  cursor:pointer;
+}
+
+.overlay-container-02:hover
+.overlay-02 {
+  height:62px;
+  opacity: 1;
+}
+
+.overlay-02 {
+  width: 260px;
+  height:0;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.eye-overlay-02 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 10px;
+  bottom: 39px;
+  position: absolute;
+  opacity: 1;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: #4591b1;
+  height: 40px;
+  width: 41px;
+}
+
+.fa-eye-02 {
+  font-size: 0.8em;
+}
+
+.overlay-text-02 {
+  margin-top: 5px;
+  line-height: 5px;
+  padding-left: 5px;
+}
+
+.overlay__title-02 {
+  font-size: 1em;
+}
+
+.overlay__para-02 {
+  font-size: 0.9em;
+}
+
+.overlay-container-03 {
+  position: relative;
+  width: 260px;
+  height: 173px;
+  margin-bottom: 3px;
+  cursor:pointer;
+}
+
+.overlay-container-03:hover
+.overlay-03 {
+  height:62px;
+  opacity: 1;
+}
+
+.overlay-03 {
+  width: 260px;
+  height:0;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.eye-overlay-03{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 10px;
+  bottom: 39px;
+  position: absolute;
+  opacity: 1;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: #4591b1;
+  height: 40px;
+  width: 41px;
+}
+
+.fa-eye-03 {
+  font-size: 0.8em;
+}
+
+.overlay-text-03 {
+  margin-top: 5px;
+  line-height: 5px;
+  padding-left: 5px;
+}
+
+.overlay__title-03 {
+  font-size: 1em;
+}
+
+.overlay__para-03 {
+  font-size: 0.9em;
+}
+
+.overlay-container-04 {
+  position: relative;
+  width: 260px;
+  height: 173px;
+  margin-bottom: 3px;
+  cursor:pointer;
+}
+
+.overlay-container-04:hover
+.overlay-04 {
+  height:62px;
+  opacity: 1;
+}
+
+.overlay-04 {
+  width: 260px;
+  height:0;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.eye-overlay-04{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 10px;
+  bottom: 39px;
+  position: absolute;
+  opacity: 1;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: #4591b1;
+  height: 40px;
+  width: 41px;
+}
+
+.fa-eye-04 {
+  font-size: 0.8em;
+}
+
+.overlay-text-04{
+  margin-top: 5px;
+  line-height: 5px;
+  padding-left: 5px;
+}
+
+.overlay__title-04 {
+  font-size: 1em;
+}
+
+.overlay__para-04 {
+  font-size: 0.9em;
+}
+
+.overlay-container-05 {
+  position: relative;
+  width: 260px;
+  height: 173px;
+  margin-bottom: 3px;
+  cursor:pointer;
+}
+
+.overlay-container-05:hover
+.overlay-05 {
+  height:62px;
+  opacity: 1;
+}
+
+.overlay-05 {
+  width: 260px;
+  height:0;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.eye-overlay-05 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 10px;
+  bottom: 39px;
+  position: absolute;
+  opacity: 1;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: #4591b1;
+  height: 40px;
+  width: 41px;
+}
+
+.fa-eye-05 {
+  font-size: 0.8em;
+}
+
+.overlay-text-05 {
+  margin-top: 5px;
+  line-height: 5px;
+  padding-left: 5px;
+}
+
+.overlay__title-05 {
+  font-size: 1em;
+}
+
+.overlay__para-05 {
+  font-size: 0.9em;
+}
+
+.overlay-container-06 {
+  position: relative;
+  width: 260px;
+  height: 173px;
+  margin-bottom: 3px;
+  cursor:pointer;
+}
+
+.overlay-container-06:hover
+.overlay-06 {
+  height:62px;
+  opacity: 1;
+}
+
+.overlay-06 {
+  width: 260px;
+  height:0;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.eye-overlay-06 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 10px;
+  bottom: 39px;
+  position: absolute;
+  opacity: 1;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: #4591b1;
+  height: 40px;
+  width: 41px;
+}
+
+.fa-eye-06 {
+  font-size: 0.8em;
+}
+
+.overlay-text-06 {
+  margin-top: 5px;
+  line-height: 5px;
+  padding-left: 5px;
+}
+
+.overlay__title-06 {
+  font-size: 1em;
+}
+
+.overlay__para-06 {
+  font-size: 0.9em;
+}
+
+.overlay-container-07 {
+  position: relative;
+  width: 260px;
+  height: 173px;
+  margin-bottom: 3px;
+  cursor:pointer;
+}
+
+.overlay-container-07:hover
+.overlay-07 {
+  height:62px;
+  opacity: 1;
+}
+
+.overlay-07 {
+  width: 260px;
+  height:0;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.eye-overlay-07 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 10px;
+  bottom: 39px;
+  position: absolute;
+  opacity: 1;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: #4591b1;
+  height: 40px;
+  width: 41px;
+}
+
+.fa-eye-07 {
+  font-size: 0.8em;
+}
+
+.overlay-text-07 {
+  margin-top: 5px;
+  line-height: 5px;
+  padding-left: 5px;
+}
+
+.overlay__title-07 {
+  font-size: 1em;
+}
+
+.overlay__para-07 {
+  font-size: 0.9em;
+}
+
+.overlay-container-08 {
+  position: relative;
+  width: 260px;
+  height: 173px;
+  margin-bottom: 3px;
+  cursor:pointer;
+}
+
+.overlay-container-08:hover
+.overlay-08 {
+  height:62px;
+  opacity: 1;
+}
+
+.overlay-08 {
+  width: 260px;
+  height:0;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.eye-overlay-08 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 10px;
+  bottom: 39px;
+  position: absolute;
+  opacity: 1;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: #4591b1;
+  height: 40px;
+  width: 41px;
+}
+
+.fa-eye-08 {
+  font-size: 0.8em;
+}
+
+.overlay-text-08 {
+  margin-top: 5px;
+  line-height: 5px;
+  padding-left: 5px;
+}
+
+.overlay__title-08 {
+  font-size: 1em;
+}
+
+.overlay__para-08 {
+  font-size: 0.9em;
+}
+
+/*
+the footer section contains a google map with a blue overlay on it with a form.
+*/
+
+/*container of the google maps and the form*/
+.google-container {
+  display: flex;
+  position: relative;
+}
+
+/*google maps overlay*/
+.google-maps-overlay {
+  position: absolute;
+  width: 100%;
+  height: 700px;
+  background-color: #80b6ef;
+  opacity: 1;
+}
+
+/*google maps*/
+.google-maps {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  opacity: 0.7;
+}
+
+/*resize iframe*/
+.google-maps--size {
+  width: 100%;
+  height: 100%;
+}
+
+/*container form*/
+.google-forms {
+  position: absolute;
+  background-color: rgba(242,246,248,0.8);
+  right: 150px;
+  top: 60px;
+}
+
+.forms-container {
+  border: none;
+}
+
+/*container form title and adress*/
+.forms-text {
+  margin:0 10px 0 10px;
+}
+
+/*form name,email,subject,message*/
+.forms-contained {
+  margin:0 10px 0 10px;
+}
+
+.forms-text__titlethree {
+  margin-bottom:10px;
+  font-size: 1.5em;
+  color: #000;
+  opacity: 1;
+}
+
+.forms-text__titlefive {
+  margin:0;
+  font-size: 1em;
+  color: #64686d;
+}
+
+.forms-text__paraone,
+.forms-text__paratwo {
+  margin:0;
+  font-size: 0.9em;
+  color: #64686d;
+}
+
+.name-forms,
+.email-forms,
+.subject-forms,
+.message-forms,
+.submit-forms {
+  font-family: robotomedium,arial,helvetica,serif;
+  padding: 6px;
+  font-size: 0.9em;
+  border-radius: 3px;
+  border: 1px solid #cbcbcb;
+  width: 320px;
+}
+
+.submit-forms {
+  font-family: robotomedium,arial,helvetica,serif;
+  width: 117px;
+  height: 35px;
+  padding: 0;
+  color: #fff;
+  font-size: 0.9em;
+  background-color: #5cadd3;
+  border-color: #4591b1;
+  border-bottom: 3px solid #4591b1;
+  border-right: none;
+  border-top: none;
+  border-left: none;
+  cursor: pointer;
+}
