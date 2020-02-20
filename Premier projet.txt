@@ -1,0 +1,11 @@
+-le site doit tenir sur une page avec un menu qui reste visible, en haut de la page, même lorsque l'on se déplace dans la page ;
+
+-les différentes sections attendues sont :
+
+-un premier écran d'accueil de bienvenue, très visuel :
+
+-la liste des services offerts par l'agence ;
+
+-des exemples de projets déjà réalisés :
+
+-une carte avec un formulaire de contact (on ne vous demande pas de faire marcher le formulaire, juste de l'afficher).

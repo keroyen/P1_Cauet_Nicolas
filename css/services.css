@@ -1,0 +1,228 @@
+
+/*The main section contains two texts with a separator
+with a list of site services with logos inside the circle and a computer
+image.
+*/
+
+/*containers flex of the title and the text and the separator*/
+.main-text {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+/*containers of the title and the text and the separator*/
+.top-main-text {
+  flex: 0 1 650px;
+}
+
+/*services title*/
+.main-text__title {
+  font-family: robotoblack,arial,helvetica,serif;
+  color: #272727;
+  font-size: 2.6em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/*services separator*/
+.main-text-separator {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/*use of speudo-element to display the line after and before the circle inside the separator*/
+.main-text-separator::before,
+.main-text-separator::after {
+  content: "";
+  color: #cbcbcb;
+  flex-grow:1;
+  border-top: 1px solid;
+  margin:0 5px;
+  flex:0 0 60px;
+}
+
+/*circle inside the separator*/
+.main-text-separator__circle {
+  color: #4591b1;
+}
+
+/*services text*/
+.main-text__para {
+  color: #64686d;
+  line-height: 2em;
+  align-self: center;
+}
+
+/*computer image containers and list of services with logos inside the circle*/
+.main-image {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom:100px;
+}
+
+/*computer image containers to the left of the list*/
+.main-image-container {
+  margin: 30px 0 0 245px;
+}
+
+/*computer image*/
+.main-image-container__computer {
+  width: auto;
+}
+
+/*containers for the site services list with logos and circle */
+.main-list{
+  display: flex;
+  flex-flow: column;
+  margin: 80px 0 0 180px;
+  list-style-type: none;
+  padding-left: 0;
+  flex:0 1 500px;
+}
+
+/*containers of the first logo and the text*/
+.main-list__logo-line {
+  margin-top: 30px;
+  position: relative;
+}
+
+/*first containers of the logo and the circle*/
+.logo-line-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  bottom: 40px;
+  right:105%;
+}
+
+/*creation of the first outside circle*/
+.logo-line-container::before {
+  content: "";
+  border-radius: 50%;
+  border:1px solid #cbcbcb;
+  height: 60px;
+  width: 60px;
+  position: absolute;
+}
+
+/*first logo*/
+.logo-line-container__first-logo {
+  font-size: x-large;
+  color: #4591b1;
+}
+
+/*first circle*/
+.logo-line-container__first-circle {
+  position: absolute;
+  left: 62px;
+  font-size: 0.6em;
+  border:3px solid #fff;
+  color: #4591b1;
+}
+
+/*containers of the second logo and the text*/
+.main-list__logo-cubes {
+  margin-top: 30px;
+  position: relative;
+  padding-left: 0;
+}
+
+/*second containers of the logo and the circle*/
+.logo-cubes-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  bottom: 20px;
+  right:105%;
+}
+
+/*creation of the second outside circle*/
+.logo-cubes-container::before {
+  content: "";
+  border-radius: 50%;
+  border:1px solid #cbcbcb;
+  height: 60px;
+  width: 60px;
+  position: absolute;
+}
+
+/*second logo*/
+.logo-cubes-container__second-logo {
+  font-size: x-large;
+  color: #4591b1;
+}
+
+/*second circle*/
+.logo-cubes-container__second-circle {
+  position: absolute;
+  left: 62px;
+  font-size: 0.6em;
+  border:3px solid #fff;
+  color: #4591b1;
+}
+
+/*containers of the third logo and the text*/
+.main-list__logo-pie {
+  margin-top: 30px;
+  position: relative;
+  padding-left: 0;
+}
+
+/*third containers of the logo and the circle*/
+.logo-pie-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  bottom:40px;
+  right:105%;
+}
+
+/*creation of the third outside circle*/
+.logo-pie-container::before {
+  content: "";
+  border-radius: 50%;
+  border:1px solid #cbcbcb;
+  height: 60px;
+  width: 60px;
+  position: absolute;
+}
+
+/*third logo*/
+.logo-pie-container__third-logo {
+  font-size: x-large;
+  color: #4591b1;
+}
+
+/*third circle*/
+.logo-pie-container__third-circle {
+  position: absolute;
+  left: 62px;
+  font-size: 0.6em;
+  border:3px solid #fff;
+  color: #4591b1;
+}
+
+/*title inside the list*/
+.main-list__title {
+  color: #272727;
+  margin: 0 0 5px 0;
+}
+
+/*paragraph inside the list*/
+.main-list__para {
+  color: #5b5b5b;
+  line-height: 22px;
+  margin: 0;
+}

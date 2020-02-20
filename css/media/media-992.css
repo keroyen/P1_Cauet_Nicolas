@@ -1,0 +1,208 @@
+@media only screen and (max-width:992px) {
+
+  /*website logo*/
+  .top-header-logo__img {
+    margin: 22px 0 22px 50px;
+  }
+
+  /*container of the list and the logo*/
+  .top-nav {
+    display: block;
+    float: none;
+    background-color: #fff;
+  }
+
+  /*list container*/
+  .top-nav-container {
+    margin:0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    text-align: center;
+  }
+
+  /*here is the hamburger menu we use an label and an hidden input for display the hamburger menu*/
+
+  /*label for the hamburger menu*/
+  .top-nav-menu-toggle {
+    padding: 28px 20px;
+    position: relative;
+    float: right;
+    top: 22px;
+    right: 30px;
+    cursor: pointer;
+  }
+
+  /*creation of the three bars of our hamburger menu*/
+  .top-nav-menu-toggle__navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition: background .2s ease-out;
+  }
+
+  /*top bar*/
+  .top-nav-menu-toggle__navicon:before {
+    content: "";
+    background: #333;
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: 5px;
+  }
+
+  /*bottom bar*/
+  .top-nav-menu-toggle__navicon:after {
+    content: "";
+    background: #333;
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: -5px;
+  }
+
+  /*hide the input*/
+  .top-nav-menu-checkbox {
+    display: none;
+  }
+
+  /*when we click on the label the menu is displayed*/
+  .top-nav-menu-checkbox:checked ~
+  .top-nav-container {
+    max-height: 240px;
+  }
+
+  /*we set a background transparent for hidde the middle bar when we checked the nav button*/
+  .top-nav-menu-checkbox:checked ~
+  .top-nav-menu-toggle
+  .top-nav-menu-toggle__navicon {
+    background: transparent;
+  }
+
+  /*when we checked the nav button the top bar rotate 45 degrees*/
+  .top-nav-menu-checkbox:checked ~
+  .top-nav-menu-toggle
+  .top-nav-menu-toggle__navicon:before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
+  .top-nav-menu-checkbox:checked ~
+  .top-nav-menu-toggle
+  .top-nav-menu-toggle__navicon:after {
+    transform: rotate(45deg);
+    top:0;
+  }
+
+  /*navigation link*/
+  .top-nav-container__list__link {
+    font-size: 0.9em;
+    display: block;
+    outline: 1px solid #4591b1;
+    padding: 20px;
+    text-decoration: none;
+  }
+
+  .top-nav-container__list__link:hover {
+    background-color: #ddd;
+    border-top: 0;
+    padding-top: 20px;
+  }
+
+  /*background image text*/
+  .bg-text {
+    margin-left: 68px;
+  }
+
+  /*image of the section services*/
+  .main-image-container {
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+    margin: 50px 0 0 0;
+  }
+
+  /*list of services*/
+  .main-list {
+    flex:0 1 800px;
+    margin: 0 0 0 80px;
+  }
+
+  /*first logo of the list of services*/
+  .main-list__logo-line {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  /*second and third logo of the list of services*/
+  .main-list__logo-cubes,
+  .main-list__logo-pie {
+    margin-top: 60px;
+    padding-top:0;
+  }
+
+  /*positioning the logos of the list*/
+  .logo-line-container,
+  .logo-cubes-container,
+  .logo-pie-container {
+    bottom: 20px;
+    right: 92%;
+  }
+
+  /*text inside the list*/
+  .main-list__para {
+    padding-top: 10px;
+  }
+
+  /*container of images from the project section*/
+  .portfolio-image {
+    flex:0 1 auto;
+  }
+
+  /*form container*/
+  .google-forms {
+    background-color: rgba(242, 246, 248, 1);
+    position: unset;
+    width: 100%;
+    left:0;
+    top:0;
+    right: 0;
+    margin-top: 10px;
+  }
+
+  /*fieldset*/
+  .forms-container {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .forms-text {
+    margin: 10px;
+  }
+
+  .forms-contained {
+    margin:10px;
+  }
+
+  .name-forms,
+  .email-forms,
+  .subject-forms,
+  .message-forms,
+  .submit-forms {
+    text-align: center;
+  }
+
+}
