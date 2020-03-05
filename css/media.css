@@ -1,0 +1,651 @@
+@media only screen and (max-width:992px) {
+
+  /*website logo*/
+  .top-header-logo__img {
+    margin: 22px 0 22px 50px;
+  }
+
+  /*container of the list and the logo*/
+  .top-nav {
+    display: block;
+    float: none;
+    background-color: #fff;
+  }
+
+  /*list container*/
+  .top-nav-container {
+    margin:0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    text-align: center;
+  }
+
+  /*here is the hamburger menu we use an label and an hidden input for display the hamburger menu*/
+
+  /*label for the hamburger menu*/
+  .top-nav-menu-toggle {
+    padding: 28px 20px;
+    position: relative;
+    float: right;
+    top: 22px;
+    right: 30px;
+    cursor: pointer;
+  }
+
+  /*creation of the three bars of our hamburger menu*/
+  .top-nav-menu-toggle__navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition: background .2s ease-out;
+  }
+
+  /*top bar*/
+  .top-nav-menu-toggle__navicon:before {
+    content: "";
+    background: #333;
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: 5px;
+  }
+
+  /*bottom bar*/
+  .top-nav-menu-toggle__navicon:after {
+    content: "";
+    background: #333;
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: -5px;
+  }
+
+  /*hide the input*/
+  .top-nav-menu-checkbox {
+    display: none;
+  }
+
+  /*when we click on the label the menu is displayed*/
+  .top-nav-menu-checkbox:checked ~
+  .top-nav-container {
+    max-height: 240px;
+  }
+
+  /*we set a background transparent for hidde the middle bar when we checked the nav button*/
+  .top-nav-menu-checkbox:checked ~
+  .top-nav-menu-toggle
+  .top-nav-menu-toggle__navicon {
+    background: transparent;
+  }
+
+  /*when we checked the nav button the top bar rotate 45 degrees*/
+  .top-nav-menu-checkbox:checked ~
+  .top-nav-menu-toggle
+  .top-nav-menu-toggle__navicon:before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
+  .top-nav-menu-checkbox:checked ~
+  .top-nav-menu-toggle
+  .top-nav-menu-toggle__navicon:after {
+    transform: rotate(45deg);
+    top:0;
+  }
+
+  /*navigation link*/
+  .top-nav-container__list__link {
+    font-size: 0.9em;
+    display: block;
+    outline: 1px solid #4591b1;
+    padding: 20px;
+    text-decoration: none;
+  }
+
+  .top-nav-container__list__link:hover {
+    background-color: #ddd;
+    border-top: 0;
+    padding-top: 20px;
+  }
+
+  /*background image text*/
+  .bg-text {
+    margin-left: 68px;
+  }
+
+  /*image of the section services*/
+  .main-image-container {
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+    margin: 50px 0 0 0;
+  }
+
+  /*list of services*/
+  .main-list {
+    flex:0 1 800px;
+    margin: 0 0 0 80px;
+  }
+
+  /*first logo of the list of services*/
+  .main-list__logo-line {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  /*second and third logo of the list of services*/
+  .main-list__logo-cubes,
+  .main-list__logo-pie {
+    margin-top: 60px;
+    padding-top:0;
+  }
+
+  /*positioning the logos of the list*/
+  .logo-line-container,
+  .logo-cubes-container,
+  .logo-pie-container {
+    bottom: 20px;
+    right: 92%;
+  }
+
+  /*text inside the list*/
+  .main-list__para {
+    padding-top: 10px;
+  }
+
+  /*container of images from the project section*/
+  .portfolio-image {
+    flex:0 1 auto;
+  }
+
+  /*form container*/
+  .google-forms {
+    background-color: rgba(242, 246, 248, 1);
+    position: unset;
+    width: 100%;
+    left:0;
+    top:0;
+    right: 0;
+    margin-top: 10px;
+  }
+
+  /*fieldset*/
+  .forms-container {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .forms-text {
+    margin: 10px;
+  }
+
+  .forms-contained {
+    margin:10px;
+  }
+
+  .name-forms,
+  .email-forms,
+  .subject-forms,
+  .message-forms,
+  .submit-forms {
+    text-align: center;
+  }
+
+}
+@media only screen and (max-width: 768px) {
+
+  .top-header-logo {
+    float: left;
+    display: block;
+    font-size: 2em;
+  }
+
+  .top-header-logo__img {
+    margin: 22px 0 22px 30px;
+  }
+
+  .top-nav {
+    display: block;
+    float: none;
+    background-color: #fff;
+  }
+
+  .top-nav-container {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    text-align: center;
+  }
+
+  .top-nav-menu-toggle {
+    padding: 28px 20px;
+    position: relative;
+    float: right;
+    top: 22px;
+    right: 30px;
+    cursor: pointer;
+  }
+
+  .top-nav-menu-toggle__navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition: background .2s ease-out;
+  }
+
+  .top-nav-menu-toggle__navicon:before {
+    content: "";
+    background: #333;
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: 5px;
+  }
+
+  .top-nav-menu-toggle__navicon:after {
+    content: "";
+    background: #333;
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: -5px;
+  }
+
+  .top-nav-menu-checkbox {
+    display: none;
+  }
+
+  .top-nav-menu-checkbox:checked ~
+  .top-nav-container {
+    max-height: 240px;
+  }
+
+  .top-nav-menu-checkbox:checked ~
+  .top-nav-menu-toggle
+  .top-nav-menu-toggle__navicon {
+    background: transparent;
+  }
+
+  .top-nav-menu-checkbox:checked ~
+  .top-nav-menu-toggle
+  .top-nav-menu-toggle__navicon:before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
+  .top-nav-menu-checkbox:checked ~
+  .top-nav-menu-toggle
+  .top-nav-menu-toggle__navicon:after {
+    transform: rotate(45deg);
+    top:0;
+  }
+
+  .top-nav-container__list__link {
+    font-size: 0.9em;
+    display: block;
+    outline: 1px solid #4591b1;
+    padding: 20px;
+    text-decoration: none;
+  }
+
+  .top-nav-container__list__link:hover {
+    background-color: #ddd;
+    border-top: 0;
+    padding-top: 20px;
+  }
+
+  .bg {
+    height: 400px;
+  }
+
+  .bg-text {
+    margin-top:40px;
+    margin-left: 60px;
+  }
+
+  .bg-text__title {
+    font-size: 1.9em;
+  }
+
+  .bg-text__para {
+    font-size: 0.9em;
+  }
+
+  .bg-text-btn {
+    font-size: 1em;
+    width: 100px;
+    height: 40px;
+  }
+
+  .btn-left {
+    top: 150px;
+    font-size: 1em;
+    width: 30px;
+    height: 60px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+
+  .btn-right {
+    top: 150px;
+    font-size: 1em;
+    width: 30px;
+    height: 60px;
+    right: 0;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+
+  .btn-left--border,
+  .btn-right--border {
+    top: 21px;
+  }
+
+  .main-text__title {
+    font-size: 1.9em;
+  }
+
+  .main-text__para {
+    font-size:  0.9em;
+  }
+
+  .main-image-container {
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+    margin: 0;
+  }
+
+  .main-list {
+    flex:0 1 800px;
+    margin: 0 15px 0 80px;
+  }
+
+  .main-list__logo-line {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .main-list__logo-cubes,
+  .main-list__logo-pie {
+    margin-top: 60px;
+    padding-top:0;
+  }
+
+  .logo-line-container,
+  .logo-cubes-container,
+  .logo-pie-container {
+    bottom: 20px;
+    right: 92%;
+  }
+
+  .main-list__title {
+    font-size: 1em;
+  }
+
+  .main-list__para {
+    padding-top: 10px;
+    font-size: 0.9em;
+  }
+
+  .project__title {
+    font-size: 1.9em;
+  }
+
+  .project__para {
+    font-size: 0.9em;
+  }
+
+  .btn__allworks,
+  .btn__creative,
+  .btn__corporate,
+  .btn__portfolio {
+    font-size: 0.8em;
+  }
+
+  .overlay__title-01,
+  .overlay__title-02,
+  .overlay__title-03,
+  .overlay__title-04,
+  .overlay__title-05,
+  .overlay__title-06,
+  .overlay__title-07,
+  .overlay__title-08 {
+    font-size: 0.9em;
+  }
+
+  .overlay__para-01,
+  .overlay__para-02,
+  .overlay__para-03,
+  .overlay__para-04,
+  .overlay__para-05,
+  .overlay__para-06,
+  .overlay__para-07,
+  .overlay__para-08,
+  .overlay__para-09 {
+    font-size: 0.8em;
+  }
+
+  .google-forms {
+    background-color: rgba(242, 246, 248, 1);
+    position: unset;
+    width: 100%;
+    left:0;
+    top:0;
+    right: 0;
+    margin-top: 10px;
+  }
+
+  .forms-container {
+    margin: 0;
+    padding: 0;
+  }
+
+  .forms-text {
+    margin: 10px;
+  }
+
+  .forms-contained {
+    margin:10px;
+  }
+
+  .name-forms,
+  .email-forms,
+  .subject-forms,
+  .message-forms {
+    width:200px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .top-header {
+    height: 50px;
+  }
+
+  .top-header-logo__img {
+    margin: 5px 0 5px 0;
+  }
+
+  .top-nav-menu-toggle {
+    right:0;
+    top: 5px;
+  }
+
+  .top-background {
+    margin-top: 60px;
+  }
+
+  .bg {
+    height: 300px;
+  }
+
+  .bg-text__title {
+    font-size: 1.5em;
+  }
+
+  .btn-left,
+  .btn-right {
+    top: 120px;
+  }
+
+  .top-main-text {
+    flex:0 1 100%;
+  }
+
+  .main-image {
+    margin-bottom: 10px;
+  }
+
+  .main-image-container__computer {
+    width: 100%;
+  }
+
+  .main-list {
+    flex:0 1 100%;
+  }
+
+  .logo-line-container {
+    bottom: 45px;
+    right: 85%;
+  }
+
+  .logo-cubes-container {
+    bottom: 45px;
+    right: 85%;
+  }
+
+  .logo-pie-container {
+    bottom: 45px;
+    right: 85%;
+  }
+
+  .top-text-project {
+    flex: 0 1 300px;
+  }
+
+  .portfolio {
+    margin-bottom: 10px;
+  }
+
+  .btn-project-container__list__down {
+    left: 28px;
+  }
+
+  .btn__allworks,
+  .btn__creative,
+  .btn__corporate,
+  .btn__portfolio {
+    width: 100%;
+  }
+
+  .google-maps-overlay {
+    width: 100%;
+    height: 600px;
+  }
+
+  .google-maps {
+    height: 100%;
+    width: 100%;
+  }
+
+  .google-forms {
+    background-color: rgba(242, 246, 248, 1);
+    position: unset;
+    width: 100%;
+    left:0;
+    top:0;
+    right: 0;
+    margin-top: 10px;
+  }
+
+  .forms-container {
+    margin: 0;
+    padding: 0;
+  }
+
+  .forms-text {
+    margin: 10px;
+  }
+
+  .forms-contained {
+    margin:10px;
+  }
+
+  .name-forms,
+  .email-forms,
+  .subject-forms,
+  .message-forms {
+    width:200px;
+  }
+
+}
+@media only screen and (max-width: 320px) {
+  .top-header-logo__img {
+    margin: 0;
+  }
+
+  .top-nav-menu-toggle {
+    right: 0;
+    left: 0;
+    top: 0;
+  }
+
+  .bg {
+    height: 300px;
+  }
+
+  .bg-text {
+    margin: 0;
+    text-align: center;
+    position: relative;
+  }
+
+  .bg-text__title {
+    font-size: 1.5em;
+    line-height: 35px;
+  }
+
+  .btn-left {
+    top: 180px;
+  }
+
+  .btn-right {
+    top: 180px;
+  }
+
+  .main-list {
+    text-align: center;
+    margin: 30px 0 0 0;
+  }
+
+  .logo-line-container,
+  .logo-cubes-container,
+  .logo-pie-container {
+    bottom: 120px;
+    right: 65%;
+  }
+
+}
