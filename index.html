@@ -13,6 +13,16 @@
 </head>
 
 <body>
+  <!--
+  1.Menu de naviagtion. ligne (17)-(47)
+  2.Diaporama avec le texte au-dessus. ligne (54-70)
+  3.Element graphique de séparation de la partie "SERVICES" et le texte. ligne (77-96)
+  4.L'image d'ordinateur et la liste des services. ligne (78-146)
+  5.Element graphique de séparation de la partie "PORTFOLIO" et les textes
+    de la liste des onglets des différents projets. ligne (156-195)
+  6.Partie regroupant les images des projets,les textes,l'effet d'overlay. ligne (198-315)
+  7.Partie regroupant iframe ainsi que le formulaire de contact. ligne (318-358)
+-->
   <span class="anchor" id="accueil"></span>
   <header class="top-header">
     <p class="top-header-logo">
@@ -20,10 +30,10 @@
     </p>
     <nav class="top-nav">
       <!--
-      structure de base pour mon hamburger menu il suffit de lié notre checkox
-      a un label et de styliser se label grâce a notre span.
-      La checkbox et caché pour la version ordinateur et s'affiche en version
-      modifié pour les tablettes et les téléphones.
+      structure de base pour mon hamburger menu il suffit de lier notre checkox
+      à un label et de styliser ce label grâce à notre span.
+      La checkbox est cacheé pour la version ordinateur et s'affiche en version
+      modifiée pour les tablettes et les téléphones.
     -->
     <input type="checkbox" class="top-nav-menu-checkbox" id="top-nav-menu-checkbox"/>
     <label for="top-nav-menu-checkbox" class="top-nav-menu-toggle">
@@ -46,11 +56,11 @@
   </nav>
 </header>
 
-<!--Section contenant la diaporama ainsi que le texte au dessus-->
+<!--Section contenant le diaporama ainsi que le texte au-dessus-->
 <section class="top-background">
-  <!--Conteneur de image de la diaporama-->
+  <!--Conteneur de l'image du diaporama-->
   <div class="bg">
-    <!--Conteneur du texte au dessus de la diaporama-->
+    <!--Conteneur du texte au-dessus du diaporama-->
     <div class="bg-text">
       <h1 class="bg-text__title"><span class="bg-text__title--color">WebAgency </span> : L'agence de tous <br/>vos projets!</h1>
       <p class="bg-text__para"> Vous avez un projet web? la WebAgency vous aide à le réaliser!</p>
@@ -67,7 +77,7 @@
 
 <!--
 Section contenant le texte de la partie services
-et élément graphique de séparation
+et élément graphique de séparation.
 -->
 <section class="main-text">
   <span class="anchor" id="services"></span>
@@ -75,7 +85,7 @@ et élément graphique de séparation
     <h2 class="main-text__title" >Nos services</h2>
     <!--
     Conteneur de notre séparateur graphique de la partie "SERVICES"
-    utilisation des speudo élément pour créer le trait
+    utilisation des pseudos élément pour créer le trait.
   -->
   <div class="main-text-separator">
     <i class="fas fa-circle main-text-separator__circle"></i>
@@ -91,7 +101,7 @@ et élément graphique de séparation
 </section>
 <!--
 Section contenant l'image d'ordinateur ainsi que
-la liste des services proposer
+la liste des services proposer.
 -->
 <section class="main-image">
   <p class="main-image-container">
@@ -101,7 +111,7 @@ la liste des services proposer
   <ul class="main-list">
     <li class="main-list__logo-line">
       <!--
-      Conteneur des Logos placer en position asbolue qui nous permet
+      Conteneur des Logos en position asbolue qui nous permet
       grâce au speudo élément de créer le cercle.
     -->
     <div class="logo-line-container">
@@ -151,7 +161,7 @@ des différents projets.
       <h2 class="project__title">Nos projets</h2>
       <!--
       Conteneur de notre séparateur graphique de la partie portfolio
-      utilisation des speudo élément pour créer le trait
+      utilisation des pseudos éléments pour créer le trait.
     -->
     <div class="project-separator">
       <i class="fas fa-circle project-separator__circle"></i>
@@ -163,6 +173,7 @@ des différents projets.
   </div>
 </div>
 
+  <!--Conteneur des onglets ainsi que du logo en dessous du boutton Allworks-->
 <div class="btn-project">
   <!--Liste des différents onglets-->
   <ul class="btn-project-container">
@@ -189,18 +200,17 @@ des différents projets.
   <!--Conteneur de toutes les images de la partie "PORTFOLIO"-->
   <div class="portfolio-images">
     <!--
-    Conteneur de l'effet d'overlay sur l'image placer
-    au dessus de l'image.
+    Conteneur de l'effet d'overlay au dessus de l'image.
   -->
   <div class="container-images overlay-container-01">
     <img class="container-images__photo" src="images/portfolio/01.jpg" alt="Pair of glasses with a nose black" />
     <!--
     Conteneur de l'overlay du texte est du logo
-    placer au dessus de notre image avec une transition pour une
-    meilleur fluididité.
+    placer au-dessus de notre image avec une transition pour une
+    meilleure fluidité.
   -->
   <div class="overlay-01">
-    <!--conteneur du Logo en forme d'oeil-->
+    <!--Conteneur du Logo en forme d'oeil-->
     <div class="eye-overlay-01">
       <i class="far fa-eye fa-eye-01"></i>
     </div>
@@ -305,7 +315,7 @@ des différents projets.
 </div>
 </section>
 
-<!--section contenant une google maps est notre formualire de contact.-->
+<!--Section contenant une google maps est notre formualire de contact.-->
 <footer class="google-container">
   <span class="anchor anchor--contact" id="contact"></span>
   <!--Conteneur de notre google maps-->
@@ -314,9 +324,9 @@ des différents projets.
       <iframe class="google-maps google-maps--size" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.3127822897723!2d4.8656953159488925!3d52.364748255475384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5e20a7906f053%3A0x91c5a3afdc45563e!2sJacob%20van%20Lennepstraat%20151%2C%201053%20HW%20Amsterdam%2C%20Pays-Bas!5e0!3m2!1sfr!2sfr!4v1578245312597!5m2!1sfr!2sfr" style="border:0;" allowfullscreen=""></iframe>
     </div>
     <!--
-    Conteneur de notre formulaire de contact placer au dessus
+    Conteneur de notre formulaire de contact qui se trouve au-dessus
     de notre google maps sur la version ordinateur mais se retrouve en dessous
-    de notre google maps en version tablettes et téléphones.
+    de notre google maps en versions tablettes et téléphones.
   -->
   <form class="google-forms" method="post" action="#php">
     <fieldset class="forms-container">
