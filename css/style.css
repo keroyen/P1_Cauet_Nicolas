@@ -1,4 +1,4 @@
-@font-face {
+3@font-face {
   font-family: 'robotoregular';
   src: url('../fonts/Roboto-Regular-webfont.eot');
   src: url('../fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
@@ -46,6 +46,20 @@
   font-style: normal;
 }
 
+/*
+1.Section du menu de navigation avec le menu en position fixe, le logo de l'agence. ligne (70-157)
+2.Section top-background contenant l'image de background ainsi que le texte de présentation du site
+et les butons. ligne. ligne (160-281)
+3.Section main-text contient deux textes avec un séparateur graphique. ligne (284-346)
+4.Section main-image contient l'image d'ordinateur ainsi que de la liste
+des services avec les logos et le cercle autour des Logos. ligne(349-545)
+5.Section container-project contient une liste de boutons, un titre et un
+séparateur graphique. ligne (553-695)
+6.Section portfolio contient toutes les images des exemples des différents
+projets ainsi que l'effet d'overlay. ligne (697-811)
+7.Section footer qui contient la google maps et le formulaire de contact.ligne (813-916)
+*/
+
 body {
   font-family: robotomedium,arial,helvetica,serif;
   margin:0;
@@ -54,11 +68,12 @@ body {
 }
 
 /*
-Section top-header contains a logo and a menu in position fixed
-and a background image with site description.
+Section top-header qui contient notre menu en position fixe pour qu'il
+reste visible sur toute la page ainsi que notre hamburger menu caché pour les
+versions ordinateurs.
 */
 
-/*containers for the logo and the menu in position fixed*/
+/*Conteneur du menu de navigation en position fixe*/
 .top-header {
   position: fixed;
   top: 0;
@@ -66,11 +81,19 @@ and a background image with site description.
   left: 0;
   background: #fff;
   background-attachment: fixed;
-  height: 99px;
+  height: 100px;
   z-index: 2;
 }
 
-/*menu anchor*/
+/* les ancres du menu de navigation*/
+
+/*
+On utilise cette technique pour corriger le décalage des ancres causer par le menu
+en position fixe on utilise une balise span qu'on définit en display block pour occuper
+toute la largeur et la hauteur on cache élément à l'écran mais élément garde
+l'espace qu'il occupe on place élément en position relative pour pouvoir corriger
+le décalage.
+*/
 .anchor{
   display: block;
   visibility: hidden;
@@ -78,69 +101,73 @@ and a background image with site description.
   top: -100px
 }
 
+/*Permet de repositionner l'ancre pile poil sur notre formulaire de contact.*/
 .anchor--contact {
   top: 600px;
 }
 
-.anchor-portfolio {
-  display: block;
-  visibility: hidden;
-  position: relative;
-  top: -100px;
-}
 
-/*containers for the logo of the website*/
+/*Conteneur du logo du site.*/
 .top-header-logo {
   margin: 0;
   float: left;
 }
 
-/*logo of the wesite*/
+/*logo du site.*/
 .top-header-logo__img {
   margin: 22px 0 22px 155px;
 }
 
-/*containers for the menu*/
+/*Conteneur du menu de navigation.*/
 .top-nav{
   float: right;
   right: 0;
 }
 
-/* a checkbox to create a hamburger menu for the small screens*/
+/*
+Une checkbox pour créer notre hamburger menu qui s'affiche uniquement pour
+les petits écrans.
+*/
 .top-nav-menu-checkbox {
   display: none;
 }
 
-/*containers list*/
+/*Conteneur de la liste contenant les onglets du menu.*/
 .top-nav-container {
   margin: 45px 164px 45px 0;
   padding-left: 0;
   list-style-type: none;
 }
 
-/*list*/
+/* Les éléments <li>*/
 .top-nav-container__list {
   display: inline;
 }
 
-/*link of the list*/
+/*liens contenus dans les <li> représentant chaque onglet de notre menu.*/
 .top-nav-container__list__link{
   text-decoration: none;
   padding:0 15px 0 15px;
   color:#555;
 }
 
-/*annimation for the links in hover*/
+/*
+Animation des liens au passage de la souris
+qui fait apparaître le trait bleu au-dessus.
+*/
 .top-nav-container__list__link:hover {
   border-top: 3px solid #4591b1;
   padding-top: 42px;
 }
 
-/*/////////// end section top-header //////////*/
+/*Fin de la section top-header.*/
 
-/*/////////// section bg contains a background image and a presentation text of the site ///////////*/
+/*
+Section top-background contenant l'image de background
+ainsi que le texte de présentation du site.
+*/
 
-/*containers of the presentation text and the background image and three buttons*/
+/*Le conteneur du texte de présentation l'image de background et les différents boutons.*/
 .top-background {
   display: flex;
   margin-top: 100px;
@@ -148,7 +175,7 @@ and a background image with site description.
   position: relative;
 }
 
-/*background image*/
+/*L'image de fond de notre diaporama.*/
 .bg {
   background: url(../images/slider/bg1.jpg) no-repeat;
   background-size: cover;
@@ -157,7 +184,7 @@ and a background image with site description.
   flex: 1 1 100%;
 }
 
-/*presentation text*/
+/*Le conteneur du texte de présentation au-dessus de la diaporama.*/
 .bg-text {
   padding: 0;
   margin-top: 140px;
@@ -165,6 +192,7 @@ and a background image with site description.
   position: absolute;
 }
 
+/*Le titre du texte de présentation.*/
 .bg-text__title {
   font-family: robotoblack,helvetica,arial,serif;
   text-transform: uppercase;
@@ -178,12 +206,13 @@ and a background image with site description.
   color: #4591b1;
 }
 
+/*Le paragraphe du texte de présentation.*/
 .bg-text__para {
   color: #fff;
   margin-top: 10px;
 }
 
-/*presentation text button*/
+/*Le buton du texte de présentation.*/
 .bg-text-btn {
   font-family: robotomedium, arial,helvetica,serif;
   color: #fff;
@@ -202,7 +231,11 @@ and a background image with site description.
 }
 
 
-/*left button of the background image with a rounded border*/
+/*
+Conteneur de la flèche de gauche placer en position absolue au-dessus
+de notre diaporama pour pouvoir la placer correctement et permettant la création
+de la bordure arrondie noir en fond des logos en forme de flèche.
+*/
 .btn-left {
   position: absolute;
   left: 0;
@@ -218,6 +251,7 @@ and a background image with site description.
   cursor: pointer;
 }
 
+/*Logo de gauche en forme de flèche.*/
 .btn-left--border {
   position: absolute;
   left: 0;
@@ -225,7 +259,10 @@ and a background image with site description.
   left: 8px;
 }
 
-/*right button of the background image with a rounded border*/
+/*
+Conteneur de la flèche de droite placer en position absolue au-dessus
+de notre diaporama pour pouvoir la placer correctement.
+*/
 .btn-right {
   position: absolute;
   right: 0;
@@ -241,6 +278,7 @@ and a background image with site description.
   cursor: pointer;
 }
 
+/*Logo de droite en forme de flèche.*/
 .btn-right--border {
   position: absolute;
   top:25px;
@@ -248,24 +286,26 @@ and a background image with site description.
 }
 
 
-/*The main section contains two texts with a separator
-with a list of site services with logos inside the circle and a computer
-image.
-*/
+/*
+La section main-text contient deux textes avec un séparateur graphique.
+/*
 
-/*containers flex of the title and the text and the separator*/
+/*
+Le conteneur flexible du titre et du texte ainsi que du séparateur graphique pour
+aligner le contenu au centre.
+*/
 .main-text {
   display: flex;
   justify-content: center;
   text-align: center;
 }
 
-/*containers of the title and the text and the separator*/
+/*Le conteneur du texte de la partie service.*/
 .top-main-text {
   flex: 0 1 650px;
 }
 
-/*services title*/
+/*Titre de la section service.*/
 .main-text__title {
   font-family: robotoblack,arial,helvetica,serif;
   color: #272727;
@@ -274,7 +314,10 @@ image.
   text-transform: uppercase;
 }
 
-/*services separator*/
+/*
+Le conteneur du séparateur graphique de la section sevices permettant d'aligner
+notre contenu au centre.
+*/
 .main-text-separator {
   display: flex;
   flex-flow: row;
@@ -282,47 +325,52 @@ image.
   justify-content: center;
 }
 
-/*use of speudo-element to display the line after and before the circle inside the separator*/
+/*
+Utilisation des speudo-element before et after pour créer nos deux barres
+juste à coter de notre rond bleu.
+*/
 .main-text-separator::before,
 .main-text-separator::after {
   content: "";
   color: #cbcbcb;
-  flex-grow:1;
   border-top: 1px solid;
   margin:0 5px;
   flex:0 0 60px;
 }
 
-/*circle inside the separator*/
+/*Le logo en forme de cercle.*/
 .main-text-separator__circle {
   color: #4591b1;
 }
 
-/*services text*/
+/*le texte de la partie service.*/
 .main-text__para {
   color: #64686d;
   line-height: 2em;
   align-self: center;
 }
 
-/*computer image containers and list of services with logos inside the circle*/
+/*
+La section main-image contient l'image d'ordinateur ainsi que de la liste
+des services avec les logos et le cercle autour des Logos.
+*/
 .main-image {
   display: flex;
   flex-wrap: wrap;
   margin-bottom:100px;
 }
 
-/*computer image containers to the left of the list*/
+/*Le conteneur de l'image d'ordinateur permettant de bien la placer.*/
 .main-image-container {
   margin: 30px 0 0 245px;
 }
 
-/*computer image*/
+/*L'image de l'ordinateur.*/
 .main-image-container__computer {
   width: auto;
 }
 
-/*containers for the site services list with logos and circle */
+/*Le conteneur de la liste des services du site ainsi que des logos.*/
 .main-list{
   display: flex;
   flex-flow: column;
@@ -332,13 +380,20 @@ image.
   flex:0 1 500px;
 }
 
-/*containers of the first logo and the text*/
+/*
+Le conteneur du premier logo de la liste placé en position relative permettant
+de placer par la suite nos différents logos.
+*/
 .main-list__logo-line {
   margin-top: 30px;
   position: relative;
 }
 
-/*first containers of the logo and the circle*/
+/*
+Le premier conteneur du premier logo de la liste et du cercle placé en position
+absolue pour placer le logo et le cercle correctement et l'utilisation de la
+propriété flexible pour aligner les éléments plus facilement.
+*/
 .logo-line-container {
   position: absolute;
   display: flex;
@@ -350,7 +405,10 @@ image.
   right:105%;
 }
 
-/*creation of the first outside circle*/
+/*
+Utilisation du speudo-élément before pour permettre la création du cercle
+autour de nos deux logos placer en position absolue.
+*/
 .logo-line-container::before {
   content: "";
   border-radius: 50%;
@@ -360,13 +418,13 @@ image.
   position: absolute;
 }
 
-/*first logo*/
+/*Premier logo.*/
 .logo-line-container__first-logo {
   font-size: x-large;
   color: #4591b1;
 }
 
-/*first circle*/
+/*Rond bleu du premier logo.*/
 .logo-line-container__first-circle {
   position: absolute;
   left: 62px;
@@ -375,14 +433,21 @@ image.
   color: #4591b1;
 }
 
-/*containers of the second logo and the text*/
+/*
+Le conteneur du deuxième logo de la liste placé en position relative permettant
+de placer par la suite nos différents logos.
+*/
 .main-list__logo-cubes {
   margin-top: 30px;
   position: relative;
   padding-left: 0;
 }
 
-/*second containers of the logo and the circle*/
+/*
+Le premier conteneur du second logo de la liste et du cercle placé en position
+absolue pour placer le logo et le cercle correctement et l'utilisation de la
+propriété flexible pour aligner les éléments plus facilement.
+*/
 .logo-cubes-container {
   position: absolute;
   display: flex;
@@ -394,7 +459,10 @@ image.
   right:105%;
 }
 
-/*creation of the second outside circle*/
+/*
+Utilisation du speudo-élément before pour permettre la création du cercle
+autour de nos deux logos placer en position absolue.
+*/
 .logo-cubes-container::before {
   content: "";
   border-radius: 50%;
@@ -404,13 +472,13 @@ image.
   position: absolute;
 }
 
-/*second logo*/
+/*Logo numéro deux.*/
 .logo-cubes-container__second-logo {
   font-size: x-large;
   color: #4591b1;
 }
 
-/*second circle*/
+/*Rond bleu du deuxième logo.*/
 .logo-cubes-container__second-circle {
   position: absolute;
   left: 62px;
@@ -419,14 +487,21 @@ image.
   color: #4591b1;
 }
 
-/*containers of the third logo and the text*/
+/*
+Le conteneur du troisième logo de la liste placé en position relative permettant
+de placer par la suite nos différents logos.
+*/
 .main-list__logo-pie {
   margin-top: 30px;
   position: relative;
   padding-left: 0;
 }
 
-/*third containers of the logo and the circle*/
+/*
+Le premier conteneur du premier logo de la liste et du cercle placé en position
+absolue pour placer le logo et le cercle correctement et l'utilisation de la
+propriété flexible pour aligner les éléments plus facilement.
+*/
 .logo-pie-container {
   position: absolute;
   display: flex;
@@ -438,7 +513,10 @@ image.
   right:105%;
 }
 
-/*creation of the third outside circle*/
+/*
+Utilisation du speudo-élément before pour permettre la création du cercle
+autour de nos deux logos placer en position absolue.
+*/
 .logo-pie-container::before {
   content: "";
   border-radius: 50%;
@@ -448,13 +526,13 @@ image.
   position: absolute;
 }
 
-/*third logo*/
+/*Troisième logo*/
 .logo-pie-container__third-logo {
   font-size: x-large;
   color: #4591b1;
 }
 
-/*third circle*/
+/*Rond bleu du troisième logo.*/
 .logo-pie-container__third-circle {
   position: absolute;
   left: 62px;
@@ -463,42 +541,43 @@ image.
   color: #4591b1;
 }
 
-/*title inside the list*/
+/*Les titres de la liste des services.*/
 .main-list__title {
   color: #272727;
   margin: 0 0 5px 0;
 }
 
-/*paragraph inside the list*/
+/*Les paragraphes de la liste des services.*/
 .main-list__para {
   color: #5b5b5b;
   line-height: 22px;
   margin: 0;
 }
 
-/* Middle section contains a list of buttons
-and a portfolio images with an text overlay
-in front of the images.
+/*
+La section container-project contient une liste de boutons, un titre et un
+séparateur graphique.
 */
-
-/*section project with text and separator and a list with four butttons*/
 .container-project {
   background-color: #f5f5f5;
 }
 
-/*containers with text and separator*/
+/*
+Le conteneur flexible du texte du séparateur graphique
+et du titre de la section portfolio permettant de centrer tous les éléments.
+*/
 .project {
   display: flex;
   justify-content: center;
   text-align: center;
 }
 
-/*text of the project section*/
+/*Texte de la section portfolio.*/
 .top-text-project {
   flex:0 1 650px;
 }
 
-/*title of the project section*/
+/*Titre de la section portfolio.*/
 .project__title {
   font-family: robotoblack,arial,helvetica,serif;
   color: #272727;
@@ -508,7 +587,10 @@ in front of the images.
   margin-bottom: 10px;
 }
 
-/*separator of the project text*/
+/*
+Le conteneur du séparateur graphique de la section sevices permettant d'aligner
+notre contenu au centre.
+*/
 .project-separator {
   display: flex;
   flex-flow: row nowrap;
@@ -516,7 +598,10 @@ in front of the images.
   align-items: center;
 }
 
-/*use of speudo-element to display the line after and before the circle inside the separator*/
+/*
+Utilisation des speudo-element before et after pour créer nos deux barres
+juste à coter de notre rond bleu.
+*/
 .project-separator::before,
 .project-separator::after {
   content: "";
@@ -526,7 +611,7 @@ in front of the images.
   flex: 0 0 60px;
 }
 
-/*project section separator circle*/
+/*Rond bleu de la section portfolio.*/
 .project-separator__circle {
   border: 2px solid #fff;
   border-radius: 50%;
@@ -534,7 +619,7 @@ in front of the images.
   color: #4591b1;
 }
 
-/*text of the project section*/
+/*Texte de la portfolio. */
 .project__para {
   align-self: center;
   color: #64686d;
@@ -542,14 +627,14 @@ in front of the images.
 
 }
 
-/*containers of the four buttons*/
+/*Le conteneur des quatres boutons ainsi que du logo en forme de flèche.*/
 .btn-project {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
 }
 
-/*list of the four buttons*/
+/*La liste contenant les quatres boutons.*/
 .btn-project-container {
   list-style-type: none;
   display: flex;
@@ -559,11 +644,12 @@ in front of the images.
   padding-left: 0;
 }
 
+/*Conteneur du bouton allworks ainsi que du logo en forme de flèche.*/
 .btn-project-container__list {
   position: relative;
 }
 
-/*button allworks*/
+/*Bouton allworks.*/
 .btn__allworks {
   font-family: robotomedium,helvetica,arial,serif;
   font-size: 0.9em;
@@ -581,7 +667,7 @@ in front of the images.
   width: 90px;
 }
 
-/*logo below button allworks*/
+/*Logo en forme de flèche placer en dessous de notre bouton.*/
 .btn-project-container__list__down {
   position: absolute;
   top: 25px;
@@ -590,7 +676,7 @@ in front of the images.
   color: #468cad;
 }
 
-/*button creative,corporate,portfolio*/
+/*Bouton creative,Corporate,portfolio*/
 .btn__creative,
 .btn__corporate,
 .btn__portfolio {
@@ -604,12 +690,16 @@ in front of the images.
   width:90px;
 }
 
+/*Ajout d'une bordure arrondie a droite de notre bouton portfolio.*/
 .btn__portfolio {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
-/*the portfolio section contains images and text overlays*/
+/*
+La section portfolio contient toutes les images des exemples des différents
+projets ainsi que leur effet overlay.
+*/
 .portfolio {
   display: flex;
   justify-content: center;
@@ -617,48 +707,59 @@ in front of the images.
   background-color: #f5f5f5;
 }
 
-/*container of images from the project section*/
+/*
+Conteneur des images de la section portfolio utilisation de la propriété flex
+pour définir une taille au conteneur pour afficher correctement les différentes
+images comme sur la maquette et qu'elle occupe moins d'espace en fonction
+de la taille de l'écran.
+*/
 .portfolio-images {
   display: flex;
   flex-flow: row wrap;
   justify-content:center;
   align-content: center;
   align-items: center;
-  width: 1134px;
+  flex: 0 1 1134px;
 }
 
-/*container pictures*/
+/*
+Conteneur des images de la section portfolio placer en position relative
+permettant de placer correctement overlay au-dessus des images.
+*/
 .container-images {
   align-self: center;
   position: relative;
   padding: 10px;
-  margin: 0;
+  margin: 0 0 3px 0;
+  cursor: pointer;
+  width: 260px;
+  height: 173px;
 }
 
-/*picture*/
+/*Dimension des images de la section portfolio.*/
 .container-images__photo {
   width: 260px;
   height: 173px;
 }
 
-/*overlay number one*/
-.overlay-container-01 {
-  position: relative;
-  width: 260px;
-  height: 173px;
-  margin-bottom: 3px;
-  cursor:pointer;
-}
-
-/*when you hover the image you can see the text display*/
-.overlay-container-01:hover
-.overlay-01 {
+/*
+On cible le conteneur de l'image et au passage de la souris
+on lui demande d'afficher le conteneur de overlay.
+*/
+.container-images:hover
+.overlay {
   height:62px;
   opacity: 1;
 }
 
-/*hide the overlay and add a transition for more fluidity*/
-.overlay-01 {
+/*
+On donne a notre overlay la même dimension que le conteneur de l'image
+et on lui donne une hauteur de (0 px) et une opacité de (0)
+on lui donne aussi une transition de (1s) et un effet (ease) pour qu'il
+s'affiche rapidement au début et lentement à la fin de la transition
+pour une meilleur fluidité à l'affichage de l'overlay.
+*/
+.overlay {
   width: 260px;
   height:0;
   background-color: rgba(0,0,0,0.5);
@@ -671,8 +772,8 @@ in front of the images.
   transition: 1s ease;
 }
 
-/*logo inside the overlay*/
-.eye-overlay-01 {
+/*Le conteneur du logo en forme d'oeil au-dessus de notre image.*/
+.eye-overlay {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -687,456 +788,43 @@ in front of the images.
   width: 41px;
 }
 
-/*logo*/
-.fa-eye-01 {
+/*Le logo en forme d'oeil.*/
+.fa-eye {
   font-size: 0.8em;
 }
 
-.overlay-text-01 {
+/*Le conteneur du texte contenu dans l'overlay.*/
+.overlay-text {
   margin-top: 5px;
   line-height: 5px;
   padding-left: 5px;
 }
 
-.overlay__title-01 {
+/*Titre contenu dans l'overlay*/
+.overlay__title {
   font-size: 1em;
 }
 
-.overlay__para-01 {
-  font-size: 0.9em;
-}
-
-.overlay-container-02 {
-  position: relative;
-  width: 260px;
-  height: 173px;
-  margin-bottom: 3px;
-  cursor:pointer;
-}
-
-.overlay-container-02:hover
-.overlay-02 {
-  height:62px;
-  opacity: 1;
-}
-
-.overlay-02 {
-  width: 260px;
-  height:0;
-  background-color: rgba(0,0,0,0.5);
-  color: #fff;
-  position: absolute;
-  bottom: 10px;
-  display: flex;
-  align-items: center;
-  opacity: 0;
-  transition: 1s ease;
-}
-
-.eye-overlay-02 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  right: 10px;
-  bottom: 39px;
-  position: absolute;
-  opacity: 1;
-  border-radius: 50%;
-  border: 2px solid #fff;
-  background-color: #4591b1;
-  height: 40px;
-  width: 41px;
-}
-
-.fa-eye-02 {
-  font-size: 0.8em;
-}
-
-.overlay-text-02 {
-  margin-top: 5px;
-  line-height: 5px;
-  padding-left: 5px;
-}
-
-.overlay__title-02 {
-  font-size: 1em;
-}
-
-.overlay__para-02 {
-  font-size: 0.9em;
-}
-
-.overlay-container-03 {
-  position: relative;
-  width: 260px;
-  height: 173px;
-  margin-bottom: 3px;
-  cursor:pointer;
-}
-
-.overlay-container-03:hover
-.overlay-03 {
-  height:62px;
-  opacity: 1;
-}
-
-.overlay-03 {
-  width: 260px;
-  height:0;
-  background-color: rgba(0,0,0,0.5);
-  color: #fff;
-  position: absolute;
-  bottom: 10px;
-  display: flex;
-  align-items: center;
-  opacity: 0;
-  transition: 1s ease;
-}
-
-.eye-overlay-03{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  right: 10px;
-  bottom: 39px;
-  position: absolute;
-  opacity: 1;
-  border-radius: 50%;
-  border: 2px solid #fff;
-  background-color: #4591b1;
-  height: 40px;
-  width: 41px;
-}
-
-.fa-eye-03 {
-  font-size: 0.8em;
-}
-
-.overlay-text-03 {
-  margin-top: 5px;
-  line-height: 5px;
-  padding-left: 5px;
-}
-
-.overlay__title-03 {
-  font-size: 1em;
-}
-
-.overlay__para-03 {
-  font-size: 0.9em;
-}
-
-.overlay-container-04 {
-  position: relative;
-  width: 260px;
-  height: 173px;
-  margin-bottom: 3px;
-  cursor:pointer;
-}
-
-.overlay-container-04:hover
-.overlay-04 {
-  height:62px;
-  opacity: 1;
-}
-
-.overlay-04 {
-  width: 260px;
-  height:0;
-  background-color: rgba(0,0,0,0.5);
-  color: #fff;
-  position: absolute;
-  bottom: 10px;
-  display: flex;
-  align-items: center;
-  opacity: 0;
-  transition: 1s ease;
-}
-
-.eye-overlay-04{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  right: 10px;
-  bottom: 39px;
-  position: absolute;
-  opacity: 1;
-  border-radius: 50%;
-  border: 2px solid #fff;
-  background-color: #4591b1;
-  height: 40px;
-  width: 41px;
-}
-
-.fa-eye-04 {
-  font-size: 0.8em;
-}
-
-.overlay-text-04{
-  margin-top: 5px;
-  line-height: 5px;
-  padding-left: 5px;
-}
-
-.overlay__title-04 {
-  font-size: 1em;
-}
-
-.overlay__para-04 {
-  font-size: 0.9em;
-}
-
-.overlay-container-05 {
-  position: relative;
-  width: 260px;
-  height: 173px;
-  margin-bottom: 3px;
-  cursor:pointer;
-}
-
-.overlay-container-05:hover
-.overlay-05 {
-  height:62px;
-  opacity: 1;
-}
-
-.overlay-05 {
-  width: 260px;
-  height:0;
-  background-color: rgba(0,0,0,0.5);
-  color: #fff;
-  position: absolute;
-  bottom: 10px;
-  display: flex;
-  align-items: center;
-  opacity: 0;
-  transition: 1s ease;
-}
-
-.eye-overlay-05 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  right: 10px;
-  bottom: 39px;
-  position: absolute;
-  opacity: 1;
-  border-radius: 50%;
-  border: 2px solid #fff;
-  background-color: #4591b1;
-  height: 40px;
-  width: 41px;
-}
-
-.fa-eye-05 {
-  font-size: 0.8em;
-}
-
-.overlay-text-05 {
-  margin-top: 5px;
-  line-height: 5px;
-  padding-left: 5px;
-}
-
-.overlay__title-05 {
-  font-size: 1em;
-}
-
-.overlay__para-05 {
-  font-size: 0.9em;
-}
-
-.overlay-container-06 {
-  position: relative;
-  width: 260px;
-  height: 173px;
-  margin-bottom: 3px;
-  cursor:pointer;
-}
-
-.overlay-container-06:hover
-.overlay-06 {
-  height:62px;
-  opacity: 1;
-}
-
-.overlay-06 {
-  width: 260px;
-  height:0;
-  background-color: rgba(0,0,0,0.5);
-  color: #fff;
-  position: absolute;
-  bottom: 10px;
-  display: flex;
-  align-items: center;
-  opacity: 0;
-  transition: 1s ease;
-}
-
-.eye-overlay-06 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  right: 10px;
-  bottom: 39px;
-  position: absolute;
-  opacity: 1;
-  border-radius: 50%;
-  border: 2px solid #fff;
-  background-color: #4591b1;
-  height: 40px;
-  width: 41px;
-}
-
-.fa-eye-06 {
-  font-size: 0.8em;
-}
-
-.overlay-text-06 {
-  margin-top: 5px;
-  line-height: 5px;
-  padding-left: 5px;
-}
-
-.overlay__title-06 {
-  font-size: 1em;
-}
-
-.overlay__para-06 {
-  font-size: 0.9em;
-}
-
-.overlay-container-07 {
-  position: relative;
-  width: 260px;
-  height: 173px;
-  margin-bottom: 3px;
-  cursor:pointer;
-}
-
-.overlay-container-07:hover
-.overlay-07 {
-  height:62px;
-  opacity: 1;
-}
-
-.overlay-07 {
-  width: 260px;
-  height:0;
-  background-color: rgba(0,0,0,0.5);
-  color: #fff;
-  position: absolute;
-  bottom: 10px;
-  display: flex;
-  align-items: center;
-  opacity: 0;
-  transition: 1s ease;
-}
-
-.eye-overlay-07 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  right: 10px;
-  bottom: 39px;
-  position: absolute;
-  opacity: 1;
-  border-radius: 50%;
-  border: 2px solid #fff;
-  background-color: #4591b1;
-  height: 40px;
-  width: 41px;
-}
-
-.fa-eye-07 {
-  font-size: 0.8em;
-}
-
-.overlay-text-07 {
-  margin-top: 5px;
-  line-height: 5px;
-  padding-left: 5px;
-}
-
-.overlay__title-07 {
-  font-size: 1em;
-}
-
-.overlay__para-07 {
-  font-size: 0.9em;
-}
-
-.overlay-container-08 {
-  position: relative;
-  width: 260px;
-  height: 173px;
-  margin-bottom: 3px;
-  cursor:pointer;
-}
-
-.overlay-container-08:hover
-.overlay-08 {
-  height:62px;
-  opacity: 1;
-}
-
-.overlay-08 {
-  width: 260px;
-  height:0;
-  background-color: rgba(0,0,0,0.5);
-  color: #fff;
-  position: absolute;
-  bottom: 10px;
-  display: flex;
-  align-items: center;
-  opacity: 0;
-  transition: 1s ease;
-}
-
-.eye-overlay-08 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  right: 10px;
-  bottom: 39px;
-  position: absolute;
-  opacity: 1;
-  border-radius: 50%;
-  border: 2px solid #fff;
-  background-color: #4591b1;
-  height: 40px;
-  width: 41px;
-}
-
-.fa-eye-08 {
-  font-size: 0.8em;
-}
-
-.overlay-text-08 {
-  margin-top: 5px;
-  line-height: 5px;
-  padding-left: 5px;
-}
-
-.overlay__title-08 {
-  font-size: 1em;
-}
-
-.overlay__para-08 {
+/*Paragraphe contenu dans l'overlay.*/
+.overlay__para {
   font-size: 0.9em;
 }
 
 /*
-the footer section contains a google map with a blue overlay on it with a form.
+La section contact contient une google maps et un effet d'overlay par-sdessus
+avec un formulaire de contact placer au-dessus.
 */
 
-/*container of the google maps and the form*/
+/*
+Conteneur de la google maps ainsi que du formulaire de contact placer en
+position relative permettant de placer le conteneur de l'overlay par-dessus.
+*/
 .google-container {
   display: flex;
   position: relative;
 }
 
-/*google maps overlay*/
+/*L'overlay au-dessus de la google maps placer en position asbolue.*/
 .google-maps-overlay {
   position: absolute;
   width: 100%;
@@ -1145,7 +833,7 @@ the footer section contains a google map with a blue overlay on it with a form.
   opacity: 1;
 }
 
-/*google maps*/
+/*Le conteneur de la google maps.*/
 .google-maps {
   position: relative;
   width: 100%;
@@ -1153,13 +841,13 @@ the footer section contains a google map with a blue overlay on it with a form.
   opacity: 0.7;
 }
 
-/*resize iframe*/
+/*Le conteneur de l'iframe pour nous permettre de redimensionner la google maps.*/
 .google-maps--size {
   width: 100%;
   height: 100%;
 }
 
-/*container form*/
+/*Le conteneur du formulaire.*/
 .google-forms {
   position: absolute;
   background-color: rgba(242,246,248,0.8);
@@ -1167,20 +855,22 @@ the footer section contains a google map with a blue overlay on it with a form.
   top: 60px;
 }
 
+/*Le conteneur des textes et des titres du formulaire.*/
 .forms-container {
   border: none;
 }
 
-/*container form title and adress*/
+/*Le conteneur du texte et du titre au début du formulaire.*/
 .forms-text {
   margin:0 10px 0 10px;
 }
 
-/*form name,email,subject,message*/
+/*Le conteneur des différentes partie du formulaire (nom,email ect..)*/
 .forms-contained {
   margin:0 10px 0 10px;
 }
 
+/*Le premier titre du formulaire.*/
 .forms-text__titlethree {
   margin-bottom:10px;
   font-size: 1.5em;
@@ -1188,12 +878,14 @@ the footer section contains a google map with a blue overlay on it with a form.
   opacity: 1;
 }
 
+/*Le deuxième titre du formulaire.*/
 .forms-text__titlefive {
   margin:0;
   font-size: 1em;
   color: #64686d;
 }
 
+/*Les deux paragraphes au début de notre formulaire.*/
 .forms-text__paraone,
 .forms-text__paratwo {
   margin:0;
@@ -1214,6 +906,7 @@ the footer section contains a google map with a blue overlay on it with a form.
   width: 320px;
 }
 
+/*Le bouton du formulaire.*/
 .submit-forms {
   font-family: robotomedium,arial,helvetica,serif;
   width: 117px;
